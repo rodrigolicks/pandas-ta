@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from pandas import DataFrame
-from pandas_ta.overlap.ema import ema
+from pandas_ta.overlap.rma import rma
 from pandas_ta.utils import get_drift, get_offset, verify_series
 
 
