@@ -17,9 +17,9 @@ def trix(close, length=None, signal=None, scalar=None, drift=None, offset=None, 
     if close is None: return
 
     # Calculate Result
-    ema1 = ema(close=close, length=length, **kwargs)
-    ema2 = ema(close=ema1, length=length, **kwargs)
-    ema3 = ema(close=ema2, length=length, **kwargs)
+    ema1 = rma(close=close, length=length, **kwargs)
+    ema2 = rma(close=ema1, length=length, **kwargs)
+    ema3 = rma(close=ema2, length=length, **kwargs)
     trix = scalar * ema3.pct_change(drift)
 
     trix_signal = trix.rolling(signal).mean()
